@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Minat Baca - Kampus Mengajar</title>
+  <link rel="icon" href="../smkn1cilamaya/mengajar.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="struktur.css">
+</head>
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="z-20 left-0 right-0 bg-gray-900 shadow-lg px-4 py-4 flex justify-between items-center sticky top-0">
+    <!-- Kiri: Logo -->
+    <a href="/index.html"
+   class="group flex items-center space-x-2 bg-gray-900 py-1 px-3 sm:px-4 rounded-lg transition duration-150 bg-gradient-to-r hover:from-blue-900 hover:to-blue-400">
+  
+  <img src="/smkn1cilamaya/left-arrow.png"
+       alt="logo"
+       class="h-6 w-6 sm:h-8 sm:w-8 object-contain" />
+  
+  <h1 class="text-base sm:text-sm md:text-xl font-bold text-gray-200 group-hover:text-white">
+    Kembali
+  </h1>
+</a>
+
+
+    <!-- Kanan: Nav + Burger -->
+    <div class="flex items-center space-x-4">
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-2 mr-4">
+        <a href="/program/about.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Tentang Kami</a>
+        <a href="/program/struktur.html" class="text-gray-200 hover:text-white transition font-medium bg-gray-800 px-3 py-2 rounded-lg">Struktur</a>
+        <a href="/program/proker.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Proker</a>
+        <a href="/program/galeri.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Galeri</a>
+        <a href="/program/kontak.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Kontak</a>
+      </div>
+
+      <!-- Burger Button -->
+      <button id="burgerBtn" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-gray-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-6 transform translate-x-full transition-transform duration-300 md:hidden">
+    <a href="/program/about.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Tentang Kami</a>
+    <a href="/program/struktur.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition bg-gray-800 px-3 py-2 rounded-lg">Struktur</a>
+    <a href="/program/proker.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Proker</a>
+    <a href="/program/galeri.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Galeri</a>
+    <a href="/program/kontak.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Kontak</a>
+    <button id="closeMenu" class="mt-10 text-red-400 hover:text-red-600 text-lg">Tutup Menu ✕</button>
+  </div>
+
+
+   <!-- Main Content -->
+<!-- Main Content -->
+<!-- Fullscreen Image -->
+<section class="m-0 p-0 overflow-auto">
+  <img src="/smkn1cilamaya/struktur tim.png" alt="Struktur Organisasi"
+       class="w-full h-auto block" />
+</section>
+  <div id="footer"></div>
+  <script src="/js/struktur.js">
+  </script>
+</body>
+</html>

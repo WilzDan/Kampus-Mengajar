@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Minat Baca - Kampus Mengajar</title>
+    <link rel="icon" href="smkn1cilamaya/mengajar.jpg"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="text-gray-800">
+    <nav class="z-20 left-0 right-0 bg-gray-900 shadow-lg px-4 py-2 flex justify-between items-center flex-wrap sticky top-0">
+  <!-- Kiri: Logo -->
+  <a href="index.html" class="flex items-center space-x-2">
+    <img src="smkn1cilamaya/logo twh.webp" alt="logo" class="h-8 sm:h-10" />
+    <div class="leading-tight">
+      <h2 class="text-white font-semibold text-sm sm:text-base">Kampus Mengajar</h2>
+      <p class="text-gray-400 text-xs sm:text-sm">Angkatan 8</p>
+    </div>
+  </a>
+
+  <!-- Kanan: Login / Logout -->
+  <div class="flex items-center space-x-2 mt-2 sm:mt-0">
+    <!-- Tombol Login -->
+    <a id="login-btn" href="#"
+      onclick="handleGoogleLogin()"
+      class="text-white text-sm font-semibold px-3 py-1 rounded transition duration-100
+             bg-gradient-to-r from-blue-500 to-green-500 
+             hover:from-blue-700 hover:to-green-700">
+      Login Google
+    </a>
+
+    <!-- Info User Setelah Login -->
+    <div id="user-info" class="hidden flex items-center space-x-2">
+      <img id="nav-user-photo" src="" alt="Foto Profil" class="w-8 h-8 rounded-full border" />
+      <span id="nav-user-name" class="text-white text-sm font-medium"></span>
+      <button onclick="handleLogout()" class="text-white text-sm font-semibold px-3 py-1 rounded bg-red-600 hover:bg-red-700">
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+    <section
+      class="relative bg h-screen flex flex-col justify-start items-center text-center pt-36 overflow-hidden"
+    >
+
+      <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-0"></div>
+      <div class="relative z-10 max-w-full px-4 -mt-4">
+        <div class="inline-block bg-blue-200 hover:bg-blue-100 text-indigo-600 hover:text-indigo-900 px-4 py-1 rounded-full text-sm font-medium mb-4">
+          Program Merdeka Belajar
+        </div>
+        <h1 class="text-6xl md:text-7xl font-bold text-blue-300 mb-8">
+          Kampus
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
+            Mengajar
+          </span>
+        </h1>
+        <h2 class="text-xl font-bold mb-8 text-white">
+          Kampus Mengajar - Meningkatkan literasi bersama.
+        </h2>
+        <a href="/program/about.html"
+          class="text-white font-semibold px-4 py-2 rounded-full transition duration-100
+                  bg-gradient-to-r from-blue-500 to-green-500 
+                  hover:from-blue-600 hover:to-green-600">
+          Jelajahi Program Kami
+        </a>
+      </div>
+    </section>
+    <section id="next-section" class="bg-white text-black md:py-13 py-4 md:px-6 px-0">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0">
+          
+              <!-- Card 1 -->
+          <div class="group bg-blue-100 rounded-xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
+            <div class="bg-white rounded-full p-3 mb-4 transition-transform duration-300 group-hover:scale-110">
+              <img src="smkn1cilamaya/people.png" alt="People Icon" class="w-12 h-12 ">
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Tim Solid</h3>
+            <p class="text-sm text-gray-600">Peserta terpilih berasal dari beragam institusi pendidikan tinggi di Indonesia</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group bg-green-100 rounded-xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
+            <div class="bg-white rounded-full p-3 mb-4 transition-transform duration-300 group-hover:scale-110">
+              <img src="smkn1cilamaya/setting.png" alt="Target Icon" class="w-12 h-12">
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Misi Mulia</h3>
+            <p class="text-sm text-gray-600">Meningkatkan kualitas pembelajaran di sekolah-sekolah sasaran</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group bg-purple-100 rounded-xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-xl">
+            <div class="bg-purple-900 rounded-full p-3 mb-4 transition-transform duration-300 group-hover:scale-110">
+              <img src="smkn1cilamaya/calendar.png" alt="Calendar Icon" class="w-12 h-12 transition-transform duration-300 group-hover:scale-110">
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Program Terstruktur</h3>
+            <p class="text-sm text-gray-600">Kegiatan pembelajaran dan pengembangan yang sistematis</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="komentar" class="bg-gray-200 py-12 px-4">
+      <div class="max-w-3xl mx-auto text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Komentar & Dukungan</h2>
+        <p class="text-gray-600">Bagikan dukungan dan pemikiran Anda untuk program ini</p>
+      </div>
+
+      <!-- Belum Login -->
+      <div id="belum-login" class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 text-center">
+        <div class="text-gray-400 text-5xl mb-4">💬</div>
+        <h3 class="text-xl font-semibold mb-2">Login untuk Berkomentar</h3>
+        <p class="text-gray-600 mb-4">Silakan login terlebih dahulu untuk memberikan komentar</p>
+        <button
+          onclick="handleGoogleLogin()"
+          class="bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-green-600">
+          Login dengan Google
+        </button>
+      </div>
+
+      <!-- Setelah Login -->
+      <div id="sudah-login" class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 hidden">
+        <div class="flex items-center space-x-4 mb-4">
+          <img id="user-photo" src="" alt="Foto Profil" class="w-10 h-10 rounded-full bg-gray-200" />
+          <span id="user-name" class="font-semibold">User Demo</span>
+        </div>
+
+        <textarea
+          id="komentar-input"
+          class="w-full p-3 border border-gray-300 rounded-lg mb-4"
+          placeholder="Tuliskan komentar atau dukungan Anda..."
+          rows="4"></textarea>
+
+        <!-- Tambahkan wrapper flex di sini -->
+        <div class="flex justify-end">
+          <button
+            onclick="kirimKomentar()"
+            class="flex items-center justify-center bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg">
+            💬 Kirim Komentar
+          </button>
+        </div>
+
+        <div id="daftar-komentar" class="mt-8 text-left">
+          <!-- Komentar akan ditambahkan di sini -->
+        </div>
+      </div>
+
+    </section>
+    <div id="footer"></div>
+    <div id="toast-container" class="fixed bottom-4 right-4 space-y-2 z-50"></div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

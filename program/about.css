@@ -1,0 +1,38 @@
+    .menu-enter {
+      transform: translateX(100%);
+    }
+    .menu-enter-active {
+      transition: transform 0.3s ease-out;
+      transform: translateX(0);
+    }
+    .menu-leave {
+      transform: translateX(0);
+    }
+    .menu-leave-active {
+      transition: transform 0.3s ease-in;
+      transform: translateX(100%);
+    }
+
+
+    /*animasi img*/
+    @keyframes spin-scale {
+    0%, 100% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+  }
+
+  .animate-spin-scale {
+    animation: spin-scale 6s linear infinite;
+  }
+
+  @keyframes scale-breath {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .animate-breath {
+    animation: scale-breath 3s ease-in-out infinite;
+  }

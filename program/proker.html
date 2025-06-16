@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Minat Baca - Kampus Mengajar</title>
+  <link rel="icon" href="../smkn1cilamaya/mengajar.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="proker.css">
+</head>
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="z-20 left-0 right-0 bg-gray-900 shadow-lg px-4 py-4 flex justify-between items-center sticky top-0">
+    <!-- Kiri: Logo -->
+    <a href="/index.html"
+   class="group flex items-center space-x-2 bg-gray-900 py-1 px-3 sm:px-4 rounded-lg transition duration-150 bg-gradient-to-r hover:from-blue-900 hover:to-blue-400">
+  
+  <img src="/smkn1cilamaya/left-arrow.png"
+       alt="logo"
+       class="h-6 w-6 sm:h-8 sm:w-8 object-contain" />
+  
+  <h1 class="text-base sm:text-sm md:text-xl font-bold text-gray-200 group-hover:text-white">
+    Kembali
+  </h1>
+</a>
+
+    <!-- Kanan: Nav + Burger -->
+    <div class="flex items-center space-x-4">
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-2 mr-4">
+        <a href="/program/about.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Tentang Kami</a>
+        <a href="/program/struktur.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Struktur</a>
+        <a href="/program/proker.html" class="text-gray-200 hover:text-white transition font-medium bg-gray-800 px-3 py-2 rounded-lg">Proker</a>
+        <a href="/program/galeri.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Galeri</a>
+        <a href="/program/kontak.html" class="text-gray-200 hover:text-white transition font-medium hover:bg-gray-800 px-3 py-2 rounded-lg">Kontak</a>
+      </div>
+
+      <!-- Burger Button -->
+      <button id="burgerBtn" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-gray-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-6 transform translate-x-full transition-transform duration-300 md:hidden">
+    <a href="/program/about.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Tentang Kami</a>
+    <a href="/program/struktur.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Struktur</a>
+    <a href="/program/proker.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition bg-gray-800 px-3 py-2 rounded-lg">Proker</a>
+    <a href="/program/galeri.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Galeri</a>
+    <a href="/program/kontak.html" class="text-white text-2xl font-semibold hover:text-blue-400 transition hover:bg-gray-800 px-3 py-2 rounded-lg">Kontak</a>
+    <button id="closeMenu" class="mt-10 text-red-400 hover:text-red-600 text-lg">Tutup Menu ✕</button>
+  </div>
+
+
+   <!-- Main Content -->
+<section id="proker" class="bg-gray-100 py-16 px-4 sm:px-8 lg:px-24">
+  <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-xl p-6 md:p-10">
+    
+    <!-- Judul -->
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Program Kerja Kampus Mengajar</h2>
+    <p class="text-center text-gray-600 mb-10">
+      Berikut adalah beberapa program kerja yang telah dilaksanakan oleh tim Kampus Mengajar di SMKN 1 Cilamaya.
+    </p>
+
+    <!-- Tab Menu -->
+<!-- Versi Desktop (tetap seperti punyamu sekarang) -->
+<div class="relative hidden sm:flex flex-wrap gap-2 bg-indigo-900 rounded-full py-2 px-2 w-fit mx-auto">
+  <!-- Indikator Biru Desktop -->
+  <div id="tab-indicator" class="absolute top-2 left-0 h-10 bg-blue-600 rounded-full transition-all duration-300 z-0"></div>
+
+  <!-- Tombol Tab Desktop -->
+  <button class="tab-button relative z-10 px-4 py-2 rounded-full font-semibold text-white" data-tab="literasi">Literasi & Numerasi</button>
+  <button class="tab-button relative z-10 px-4 py-2 rounded-full font-semibold text-white" data-tab="basic">Basic Knowledge</button>
+  <button class="tab-button relative z-10 px-4 py-2 rounded-full font-semibold text-white" data-tab="moonfest">Moon Festival</button>
+  <button class="tab-button relative z-10 px-4 py-2 rounded-full font-semibold text-white" data-tab="pojokbaca">Pojok Baca</button>
+  <button class="tab-button relative z-10 px-4 py-2 rounded-full font-semibold text-white" data-tab="web">Web Sekolah</button>
+</div>
+
+<!-- Versi Mobile -->
+<div class="relative flex sm:hidden flex-wrap justify-center gap-1 bg-indigo-900 rounded-full py-1 px-2 w-full mx-auto text-xs">
+  <!-- Indikator Biru Mobile (pakai ID berbeda kalau perlu) -->
+  <div id="tab-indicator-mobile" class="absolute top-1 left-0 h-6 bg-blue-600 rounded-full transition-all duration-300 z-0"></div>
+
+  <!-- Tombol Tab Mobile -->
+  <button class="tab-button relative z-10 px-2 py-1 rounded-full font-semibold text-white" data-tab="literasi">Literasi</button>
+  <button class="tab-button relative z-10 px-2 py-1 rounded-full font-semibold text-white" data-tab="basic">Basic</button>
+  <button class="tab-button relative z-10 px-2 py-1 rounded-full font-semibold text-white" data-tab="moonfest">Moon</button>
+  <button class="tab-button relative z-10 px-2 py-1 rounded-full font-semibold text-white" data-tab="pojokbaca">Baca</button>
+  <button class="tab-button relative z-10 px-2 py-1 rounded-full font-semibold text-white" data-tab="web">Web</button>
+</div>
+
+<!-- Container untuk isi slide Literasi -->
+<div id="literasi" class="mt-4 tab-content hidden bg-indigo-900 rounded-xl p-6">
+  <!-- Slide 1 -->
+  <div class="slide-content" data-slide="1">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/litnum1.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pengenalan Literasi & Numerasi. Kegiatan untuk memperkenalkan konsep dasar Literasi & Numerasi kepada siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, khususnya siswa yang masih memerlukan pemahaman tentang Literasi & Numerasi Dasar.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap pagi di hari Selasa, dilaksanakan dalam sesi pengenalan selama 30 menit di awal pembiasaan Literasi & Numerasi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Kurangnya pemahaman siswa tentang pentingnya Literasi/Numerasi & keterbatasan waktu untuk memperkenalkan konsep-konsep dasar.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membuat sesi pengenalan singkat namun interaktif dengan contoh dari kehidupan sehari-hari & menggunakan media visual seperti video atau poster untuk menarik perhatian siswa.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide-content hidden" data-slide="2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/litnum2.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4 ">Deskripsi Singkat</td>
+          <td class="p-2">Games Literasi & Numerasi. Permainan Interaktif Untuk Meningkatkan Keterampilan Literasi & Numerasi Siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, & XII. Seluruh Siswa Yang Mengikuti Pembiasaan Literasi & Numerasi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Selasa. Permainan Dilakukan Setiap Minggu Dengan Variasi Tema. Hasil Dari Games Digunakan Untuk Mengukur Keterlibatan Siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Kesulitan Menciptakan Permainan Yang Menarik Dan Relevan Dengan Materi Pembelajaran & Siswa Cepat Bosan Jika Permainan Kurang Bervariasi.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Mengembangkan Permainan Berbasis Kompetisi Dengan Hadiah Untuk Meningkatkan Antusiasme & Melibatkan Siswa Dalam Memilih Atau Mendesain Permainan Agar Lebih Relevan.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- Slide 3 -->
+  <div class="slide-content hidden" data-slide="3">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/litnum3.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pembiasaan Literasi & Numerasi. Kegiatan Rutin Untuk Membangun Kebiasaan Membaca & Berhitung Secara Konsisten.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, Dan XII. Siswa Di Seluruh Tingkat Kelas SMKN 1 Cilamaya.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Selasa. Dilaksanakan 1 Kali Seminggu Selama 45 Menit Dengan Sesi Membaca Buku & Diskusi Soal Numerasi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Konsistensi Siswa Dalam Mengikuti Kegiatan Pembiasaan & Minimnya Dukungan Fasilitas Seperti Ruang Baca Yang Memadai.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menjadwalkan Pembiasaan Secara Rutin Dengan Durasi Yang Fleksibel & Menyediakan Pojok Baca Atau Ruang Khusus Yang Nyaman Untuk Mendukung Kegiatan.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 4 -->
+  <div class="slide-content hidden" data-slide="4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/litnum4.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pengenalan Sekaligus Literasi Mengenai 3 Dosa Besar Pendidikan. Kegiatan Edukasi Untuk Meningkatkan Kesadaran Siswa Terhadap 3 Dosa Besar Pendidikan: Bullying, Intoleransi, & Kekerasan Seksual.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas XI TKJ 1. Sebagai Bagian Dari Program Literasi Nilai.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Saat Kegiatan LITNUM. Disampaikan Melalui Diskusi Kelompok & Presentasi Selama 60 Menit.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Siswa Kurang Memahami Dampak Dari 3 Dosa Besar Pendidikan & Materi Dianggap Terlalu Berat Atau Sulit Dicerna.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menyampaikan Materi Dengan Pendekatan Cerita Atau Ilustrasi Yang Mudah Dimengerti & Mengadakan Diskusi Kelompok Untuk Menggali Pemahaman Siswa Secara Mendalam.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 5 -->
+  <div class="slide-content hidden" data-slide="5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/litnum5.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pengenalan Projek Penguatan Literasi & Numerasi. Kegiatan Untuk Memperkenalkan Projek Yang Berfokus Pada Penguatan Literasi & Numerasi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas XI TKJ 1. Siswa Yang Akan Terlibat Dalam Projek Literasi Dan Numerasi Tingkat Sekolah.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Selasa, Rabu, & Kamis Di Ruang COE. Dilaksanakan Melalui Workshop 1 Hari Untuk Membimbing Siswa Memahami Tujuan & Metode Projek.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Ketidaksiapan Siswa Untuk Terlibat Aktif Dalam Projek & Keterbatasan Sumber Daya Untuk Mendukung Pelaksanaan Projek.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Memberikan Pelatihan Awal Kepada Siswa Sebelum Projek Dimulai & Memanfaatkan Sumber Daya Yang Ada Secara Kreatif Untuk Mendukung Keberhasilan Projek.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 6 -->
+  <div class="slide-content hidden" data-slide="6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/litnum6.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Projek Penguatan Literasi. Projek Membaca & Analisis Teks Untuk Meningkatkan Pemahaman Siswa Terhadap Bacaan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas XI TKJ 1. Siswa Yang Mengikuti Program Literasi Tingkat Lanjut.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Selasa, Rabu, & Kamis Di Perpustakaan. Dilakukan Selama 1 Bulan Dengan Tugas Membaca Buku & Membuat Laporan Analisis.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Sulitnya Menemukan Materi Literasi Yang Sesuai Dengan Minat Siswa & Kurangnya Waktu Untuk Mengintegrasikan Literasi Dengan Pelajaran Lain.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menggunakan Cerita Pendek, Artikel Menarik, Atau Buku Populer Sebagai Materi Utama & Mengintegrasikan Literasi Dengan Tugas Proyek Dari Mata Pelajaran Lainnya.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 7 -->
+  <div class="slide-content hidden" data-slide="7">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/litnum7.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Projek Penguatan Numerasi. Projek Untuk Melatih Siswa Mengaplikasikan Numerasi Dalam Kehidupan Sehari-hari.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas XI TKJ 1. Siswa Yang Memerlukan Penguatan Numerasi Praktis.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Selasa, Rabu, & Kamis Di Perpustakaan. Dilakukan Melalui Tugas Proyek Berbasis Kasus Nyata Selama 2 Minggu.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Siswa Cenderung Merasa Kesulitan Dengan Materi Numerasi Tingkat Lanjut & Keterbatasan Alat Bantu Visual Untuk Membantu Pemahaman.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menyediakan Soal-soal Numerasi Yang Relevan Dengan Kehidupan Sehari-hari & Menggunakan Alat Bantu Seperti Grafik, Diagram, Atau Simulasi Sederhana Untuk Mempermudah Pemahaman.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Tambahkan slide-content lainnya sesuai kebutuhan -->
+</div>
+<!-- Container untuk isi slide Basic -->
+<div id="basic" class="mt-4 tab-content hidden bg-indigo-900 rounded-xl p-6">
+  <!-- Slide 1 -->
+  <div class="slide-content" data-slide="1">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic1.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pemanfaatan Komunitas Media Sosial Sebagai Sarana Pembelajaran, Khususnya Di WhatsApp. Menggunakan Grup WhatsApp Untuk Berdiskusi, Membagikan Materi, & Menyelesaikan Tugas.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X. Siswa Yang Membutuhkan Akses Pembelajaran Jarak Jauh & Pendampingan Tambahan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Diskusi Berlangsung Setiap Hari Untuk Menjawab Pertanyaan Siswa Dengan Tugas Yang Dikumpulkan Melalui WhatsApp.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Siswa Kurang Responsif Dalam Diskusi Dan Tugas Berbasis WhatsApp & Beberapa Siswa Memiliki Keterbatasan Akses Internet Atau Perangkat.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membuat Grup Diskusi Interaktif Dengan Moderator Dari Guru Atau Siswa Yang Aktif & Menyediakan Opsi Pembelajaran Offline Bagi Siswa Dengan Keterbatasan Akses.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide-content hidden" data-slide="2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic2.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4 ">Deskripsi Singkat</td>
+          <td class="p-2">Implementasi Pembelajaran Lebih Lanjut Yang Efektif & Interaktif Melalui Media WhatsApp. Memanfaatkan WhatsApp Untuk Mengadakan Pembelajaran Tambahan Dengan Metode Yang Lebih Interaktif.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X. Siswa Yang Ingin Memperdalam Pemahaman Materi Di Luar Jam Kelas.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Dilakukan 3x Seminggu Dengan Pengiriman Materi Berupa Video, Audio, & Soal Latihan Interaktif.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Kurangnya Variasi Dalam Metode Pembelajaran Yang Membuat Siswa Cepat Bosan & Tidak Semua Siswa Memahami Materi Yang Disampaikan Secara Daring.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Memanfaatkan Fitur Whatsapp Seperti Polling, Voice Notes, Atau Video Untuk Pembelajaran & Melengkapi Pembelajaran Daring Dengan Tugas Praktis Atau Diskusi Langsung Di Kelas.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- Slide 3 -->
+  <div class="slide-content hidden" data-slide="3">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic3.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Jadwal Mengajar Sesuai KBM Di Kelas (Kurang Lebih 2-3 Jam Sehari) Sesuai Dengan Mapel Jurusan. Kegiatan Mengajar Sesuai Kurikulum Untuk Membantu Siswa Memahami Materi Mapel Jurusan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X. Siswa Di Kelas Sesuai Jurusan Masing-masing.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Bel Pertama (Jam 7.00 Pagi) Sampai Bel Terakhir (Jam 15.00 Sore). Mengajar Setiap Hari Sesuai Jadwal KBM Dengan Durasi 2-3 Jam Per Hari.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Jadwal Padat Menyebabkan Beberapa Siswa Kurang Fokus & Kesulitan Menyesuaikan Pengajaran Dengan Kebutuhan Siswa Di Berbagai Jurusan.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membagi Waktu Belajar Dengan Metode Diskusi Kelompok Untuk Menjaga Fokus Siswa & Menyesuaikan Materi Dengan Konteks Praktis Sesuai Jurusan Siswa.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 4 -->
+  <div class="slide-content hidden" data-slide="4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic4.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Jadwal Mengajar Praktek Di Lab Komputer (Kurang Lebih 2-3 Jam Sehari) Sesuai Dengan Mapel Jurusan. Mengajarkan Praktik Komputer Sesuai Dengan Kebutuhan Jurusan Untuk Meningkatkan Keterampilan Teknis Siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X. Siswa Yang Mengikuti Pembelajaran Berbasis Komputer Sesuai Jurusan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Bel Pertama (Jam 7.00 Pagi) Sampai Bel Terakhir (Jam 15.00 Sore). Praktik Dilakukan Di Laboratorium Komputer 2-3 Jam Sehari Dengan Modul & Simulasi Nyata.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Keterbatasan Perangkat Komputer Yang Membuat Siswa Harus Bergantian & Beberapa Siswa Kurang Terampil Menggunakan Software Tertentu.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membagi Siswa Dalam Kelompok Kecil Untuk Efisiensi Penggunaan Perangkat & Menyediakan Tutorial Singkat Sebelum Praktik Untuk Mempercepat Pemahaman.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 5 -->
+  <div class="slide-content hidden" data-slide="5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic5.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Mengawasi Kegiatan PSAS Sesuai Jadwal. Pengawasan Kegiatan PSAS Untuk Memastikan Siswa Memahami & Mematuhi Aturan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, Dan XII. Siswa Yang Terlibat Dalam Kegiatan PSAS Sesuai Jadwal Yang Diberikan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Senin-kamis (Tanggal 9-12 Desember). Dilakukan Sesuai Jadwal Dengan Memberikan Arahan & Evaluasi Setelah Kegiatan Selesai.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Beberapa Siswa Kurang Disiplin Selama Kegiatan PSAS & Koordinasi Dengan Guru Terkadang Tidak Berjalan Efektif.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membuat Aturan Yang Jelas Dan Memberikan Apresiasi Bagi Siswa Yang Disiplin & Meningkatkan Komunikasi Dengan Guru Terkait Jadwal Dan Evaluasi PSAS.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 6 -->
+  <div class="slide-content hidden" data-slide="6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic6.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Belajar Sambil Praktek Mengenai Chinomatography. Kegiatan Belajar Sekaligus Praktik Tentang Teknik Chinomatography Untuk Meningkatkan Pemahaman Siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Klub Chinomatography & Umum. Siswa Jurusan Yang Membutuhkan Pemahaman Praktis Mengenai Chinomatography.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Sabtu-minggu. Praktik Dilakukan Selama 2 Jam Per Minggu Dengan Pendampingan Oleh Pengajar.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Materi Dianggap Sulit Dipahami Oleh Sebagian Siswa Tanpa Pendampingan Intensif & Peralatan Praktik Terkadang Tidak Memadai Atau Rusak.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menggunakan Video Tutorial Atau Simulasi Sebelum Praktik Langsung & Melakukan Pemeriksaan Rutin Pada Peralatan Untuk Memastikan Kelayakannya.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 7 -->
+  <div class="slide-content hidden" data-slide="7">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic7.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Membantu Memaksimalkan Upacara Bendera. Kegiatan Mendukung Pelaksanaan Upacara Agar Berjalan Dengan Tertib & Khidmat.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Warga Sekolah SMKN 1 Cilamaya. Khususnya Seluruh Siswa Yang Berpartisipasi Dalam Upacara Bendera.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Senin. Dilakukan Setiap Senin Dengan Memberikan Masukan Sebelum/Sesudah Upacara Dimulai.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Siswa Kurang Tertib & Kurang Antusias Saat Mengikuti Upacara & Kendala Teknis Seperti Sound System Atau Cuaca Buruk.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Memberikan Pengarahan Rutin Kepada Siswa Tentang Pentingnya Upacara Bendera & Mempersiapkan Peralatan Teknis Lebih Awal Dan Menyediakan Rencana Cadangan Jika Cuaca Buruk.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!--slide 8-->
+  <div class="slide-content hidden" data-slide="8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/basic8.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Memeriahkan Kembali Gairah Senam Pagi. Kegiatan Senam Pagi Untuk Meningkatkan Semangat Siswa & Menjaga Kebugaran Tubuh.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Warga Sekolah SMKN 1 Cilamaya. Khususnya Seluruh Siswa & Guru Yang Mengikuti Senam Pagi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setiap Pagi Di Hari Rabu. Senam Dilakukan Setiap Rabu Pagi Dengan Musik & Gerakan Yang Variatif.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Antusiasme Siswa Untuk Senam Pagi Cenderung Rendah & Kurangnya Variasi Gerakan Yang Membuat Siswa Merasa Bosan.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Mengadakan Senam Tematik Dengan Iringan Musik Yang Menarik & Mengajak Siswa Untuk Berpartisipasi Dalam Memilih Tema Atau Lagu Senam.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Container untuk isi slide Moon -->
+<div id="moonfest" class="mt-4 tab-content hidden bg-indigo-900 rounded-xl p-6">
+  <!-- Slide 1 -->
+  <div class="slide-content" data-slide="1">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/moon1.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Susunan Acara. Rangkaian Jadwal Kegiatan Yang Terstruktur Untuk Memastikan Kelancaran Acara.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, Dan XII. Panitia & Peserta Lomba Agar Memahami Urutan & Durasi Setiap Kegiatan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Tanggal 4 November. Susunan Acara Dibuat Seminggu Sebelum Kegiatan Dimulai Dengan Buffer Waktu Untuk Setiap Sesi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Penyusunan Jadwal Acara Sering Mengalami Perubahan Karena Adanya Bentrok Agenda Sekolah & Kurangnya Referensi Dari Kegiatan Serupa Sebelumnya.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menyusun Jadwal Secara Fleksibel Dengan Buffer Waktu Untuk Setiap Kegiatan & Melibatkan Pihak Sekolah Untuk Mendapatkan Masukan Terkait Pengaturan Jadwal.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide-content hidden" data-slide="2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/moon2.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4 ">Deskripsi Singkat</td>
+          <td class="p-2">Rapat Menjelang Acara Moon Festival/Bulan Bahasa. Rapat Untuk Menyusun Persiapan Teknis & Memastikan Semua Pihak Memahami Tanggung Jawab Masing-masing.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Panitia & Guru Pembimbing Yang Terlibat Dalam Pelaksanaan Acara.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Beberapa Minggu Sebelum Kegiatan. Dilaksanakan Sebelum Hari H Acara Yang Berfokus Pada Pengecekan Kesiapan Tempat, Perlengkapan, & Teknis Acara.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Kehadiran Panitia Kurang Optimal Karena Jadwal Yang Bersamaan Dengan Tugas Lain & Diskusi Sering Berjalan Tidak Fokus Karena Keterbatasan Waktu.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menjadwalkan Rapat Lebih Awal Dan Di Luar Jam Sibuk & Membuat Agenda Rapat Yang Jelas Dan Membatasi Diskusi Pada Topik Tertentu.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- Slide 3 -->
+  <div class="slide-content hidden" data-slide="3">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/moon3.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Sosialisasi Sekaligus Briefing Ulang Kegiatan Moon Festival/Bulan Bahasa. Kegiatan Untuk Memberikan Informasi Teknis Kepada Peserta & Memastikan Pemahaman Terhadap Aturan Lomba.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Taruna/Taruni, Peserta Lomba, Juri, & Panitia.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Seminggu & Beberapa Hari Sebelum Kegiatan. Dilaksanakan Sebelum Acara Melalui Tatap Muka Atau Grup Whatsapp Dengan Penjelasan Langsung Oleh Ketua Panitia.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Tidak Semua Peserta Menerima Informasi Dengan Jelas Karena Waktu Sosialisasi Terbatas & Beberapa Peserta Terlambat Memahami Teknis Lomba.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membuat Panduan Tertulis Yang Dibagikan Kepada Peserta & Menggunakan Media Sosial Atau Grup Digital Untuk Menyampaikan Informasi Teknis.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 4 -->
+  <div class="slide-content hidden" data-slide="4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/moon4.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Kegiatan Moon Festival/Bulan Bahasa Dimulai. Pelaksanaan Lomba & Kegiatan Utama Sesuai Jadwal Yang Telah Ditentukan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, & XII. Semua Peserta Lomba & Panitia.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Tanggal 4 November. Dilaksanakan Sesuai Susunan Acara, Dimulai Dengan Pembukaan Resmi Oleh Kepala Sekolah & Dilanjutkan Dengan Perlombaan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Keterlambatan Peserta Dan Panitia Mengakibatkan Molornya Waktu Acara & Kendala Teknis Seperti Audio Dan Multimedia Saat Acara Berlangsung.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menyediakan Check-in Khusus Untuk Peserta Atau Memastikan Semua Hadir Tepat Waktu & Melakukan Uji Coba Peralatan Teknis Sebelum Acara Dimulai.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 5 -->
+  <div class="slide-content hidden" data-slide="5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/moon5.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Juri Perlombaan (Speech Contest Ver. Eng, Story Telling Ver. Indo, & Pidato Ver. Indo). Proses Penjurian Untuk Menilai Peserta Lomba Berdasarkan Kriteria Yang Telah Ditentukan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, Dan XII. Juri Yang Terdiri Dari Guru Bahasa & Ahli Bahasa Indonesia Serta Inggris.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Tanggal 4 November. Penjurian Dilakukan Selama Sesi Lomba Dengan Hasil Diumumkan Pada Akhir Acara.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Keterbatasan Waktu Juri Untuk Memberikan Penilaian Mendalam & Ketidakseimbangan Jumlah Peserta Pada Masing-masing Kategori Lomba.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membatasi Jumlah Peserta Dalam Setiap Kategori Untuk Memastikan Waktu Penilaian Cukup & Membentuk Tim Pendukung Untuk Membantu Juri Selama Proses Penilaian.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 6 -->
+  <div class="slide-content hidden" data-slide="6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/moon6.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Puncak Kegiatan Moon Festival/Bulan Bahasa. Acara puncak sebagai penutup kegiatan yang melibatkan hiburan & penampilan siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, Dan XII. Peserta, guru, & seluruh siswa SMKN 1 Cilamaya.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Tanggal 4 November. Dilaksanakan pada sore hari setelah semua lomba selesai, meliputi hiburan musik dan penampilan bakat.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Keterbatasan Waktu Untuk Menampilkan Semua Rangkaian Acara Puncak & Antusiasme Siswa Menurun Pada Akhir Acara.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Memilih Acara Puncak Yang Menarik Dan Melibatkan Interaksi Siswa & Mengatur Waktu Acara Puncak Di Sesi Yang Tidak Terlalu Lama.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 7 -->
+  <div class="slide-content hidden" data-slide="7">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/moon7.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pembagian Hadiah Lomba Juara Berupa Bingkisan Dan Sertifikat Pada Seluruh Peserta. Kegiatan Penghargaan Kepada Para Pemenang & Peserta Lomba Sebagai Bentuk Apresiasi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Kelas X, XI, Dan XII. Pemenang & Semua Peserta Lomba.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Setelah Acara Moon Festival/Bulan Bahasa. Penghargaan Diberikan Pada Akhir Acara Puncak, Di Keesokan Harinya Disertai Dokumentasi Foto Bersama.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Keterbatasan Anggaran Untuk Menyediakan Hadiah Yang Menarik & Beberapa Siswa Merasa Kurang Diapresiasi Meskipun Tidak Menang.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menggalang Dana Atau Mencari Sponsor Untuk Menambah Anggaran Hadiah & Memberikan Penghargaan Simbolis Kepada Semua Peserta Sebagai Bentuk Apresiasi.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Container untuk isi slide pojokbaca -->
+<div id="pojokbaca" class="mt-4 tab-content hidden bg-indigo-900 rounded-xl p-6">
+  <!-- Slide 1 -->
+  <div class="slide-content" data-slide="1">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/baca1.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pengolahan Kerajinan Origami & Pemanfaatan Barang Bekas Sebagai Hiasan Pojok Baca.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Warga Sekolah SMKN 1 Cilamaya. Khususnya Siswa Yang Ingin Belajar Keterampilan Kerajinan Tangan & Berkontribusi Pada Pojok Baca.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Dilakukan Dalam 3 Sesi Workshop Selama 1 Minggu Dengan Hasil Digunakan Untuk Menghias Pojok Baca.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Keterampilan Dalam Memanfaatkan Barang Bekas Sebagai Kerajinan & Terbatasnya Bahan Baku Untuk Pembuatan Dekorasi Pojok Baca.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Mengadakan Pelatihan Singkat Mengenai Kerajinan Origami Dan Daur Ulang Barang Bekas & Menggalang Donasi Bahan Bekas Layak Pakai Dari Siswa, Guru, & Komunitas Sekolah.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide-content hidden" data-slide="2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/baca2.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4 ">Deskripsi Singkat</td>
+          <td class="p-2">Sentuhan Akhir Pojok Baca. Proses Terakhir Dalam Penyempurnaan Desain & Dekorasi Pojok Baca.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Warga Sekolah SMKN 1 Cilamaya, Termasuk Siswa Yang Telah Berpartisipasi Dalam Pengerjaan Pojok Baca.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Dikerjakan Selama 2 Hari Menjelang Peresmian Pojok Baca Dengan Fokus Pada Estetika & Penataan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Kekurangan Waktu Untuk Menyelesaikan Dekorasi Sesuai Dengan Target Desain & Tidak Semua Siswa/Guru Antusias Terlibat Dalam Proses Finishing.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Membagi Tugas Akhir Secara Kelompok Untuk Mempercepat Proses Pengerjaan & Memberikan Penghargaan Kepada Siswa/Guru Yang Berkontribusi Besar Dalam Dekorasi Pojok Baca.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<!-- Slide 3 -->
+  <div class="slide-content hidden" data-slide="3">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/baca3.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Hasil Akhir Pojok Baca. Hasil Dari Kegiatan Dekorasi Pojok Baca Yang Menciptakan Ruang Baca Yang Nyaman & Menarik.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Warga Sekolah SMKN 1 Cilamaya. Khususnya Seluruh Siswa SMKN 1 Cilamaya Untuk Menggunakan Pojok Baca Sebagai Tempat Literasi.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Hasil Akhir Ditampilkan Pada Pembukaan Resmi Pojok Baca Dengan Kegiatan Membaca Bersama.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Tampilan Pojok Baca Belum Sepenuhnya Sesuai Dengan Harapan Awal Karena Keterbatasan Sumber Daya & Masih Perlu Sosialisasi Agar Siswa Lebih Aktif Menggunakan Pojok Baca.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Melakukan Evaluasi Hasil Dekorasi Untuk Menentukan Perbaikan Di Masa Mendatang & Mengadakan Sesi Pembacaan Bersama Atau Diskusi Rutin Di Pojok Baca Untuk Menarik Perhatian Siswa.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 4 -->
+  <div class="slide-content hidden" data-slide="4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/baca4.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Pemberdayaan Perpustakaan. Kegiatan Untuk Meningkatkan Fungsi Perpustakaan Sebagai Pusat Literasi & Pembelajaran.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Warga Sekolah SMKN 1 Cilamaya. Khususnya Siswa Yang Aktif Membaca & Membutuhkan Referensi Belajar Tambahan.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Dilakukan Dengan Mengatur Jadwal Pengelolaan Perpustakaan & Menambah Pustakawan Muda Dari Kalangan Siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Staf Perpustakaan Terbatas Sehingga Operasional Perpustakaan Kurang Maksimal & Koleksi Buku Kurang Diminati Siswa Karena Kurang Relevan Dengan Kebutuhan Mereka.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Melibatkan Siswa Sebagai Pustakawan Muda Untuk Membantu Operasional Perpustakaan & Memperbarui Koleksi Buku Dengan Judul-judul Yang Sesuai Dengan Minat Dan Kebutuhan Siswa.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- Slide 5 -->
+  <div class="slide-content hidden" data-slide="5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/baca5.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Revitalisasi Mading. Perbaikan Desain & Konten Mading Untuk Menarik Minat Siswa Dalam Membaca Informasi Terkini.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Warga Sekolah SMKN 1 Cilamaya. Khususnya Siswa Yang Ingin Menyampaikan Karya Atau Informasi Melalui Media Mading.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Dilakukan Dengan Pembaruan Mading Setiap Beberapa Bulan & Melibatkan Siswa Dalam Pengisian Konten.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Mading Kurang Diperhatikan Karena Desain Atau Konten Yang Monoton & Tidak Ada Jadwal Pembaruan Konten Yang Teratur.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menyusun Jadwal Pembaruan Mading Setiap Bulan Dengan Tema Yang Menarik & Melibatkan Siswa Sebagai Kontributor Utama Untuk Mengisi Konten Mading.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Container untuk isi slide web -->
+<div id="web" class="mt-4 tab-content hidden bg-indigo-900 rounded-xl p-6">
+  <!-- Slide 1 -->
+  <div class="slide-content" data-slide="1">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/web1.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4">Deskripsi Singkat</td>
+          <td class="p-2">Data Pengajar/Staff Di Website Sekolah. Memasukkan Data Pengajar/Staf Sekolah Untuk Meningkatkan Akses Informasi Di Website Sekolah.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Pengajar, Staff, & Seluruh Pihak Yang Membutuhkan Data Informasi SMKN 1 Cilamaya.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Data Dikumpulkan Diproses & Diunggah Secara Bertahap Sambil Berkoordinasi Dengan Bagian Operator Sekolah.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Kurangnya Data Pengajar & Fitur Interaktif Yang Memperkaya Pengalaman Pengguna.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menyusun Jadwal Khusus Untuk Pembaruan Website Secara Rutin Oleh Tim IT & Menyusun Template Profil Standar Untuk Mempercepat Proses Unggahan Ke Website.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide-content hidden" data-slide="2">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      <div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+          <img src="/smkn1cilamaya/web2.jpg" alt="Slide 1"
+            class="w-full h-full object-cover" />
+        </div>
+        <p class="text-white text-xs">*Foto ini diambil dari SMKN 1 Cilamaya, Kabupaten Karawang, Provinsi Jawa Barat</p>
+      </div>
+      <table class="w-full text-white text-sm border border-white border-collapse">
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2 w-1/4 ">Deskripsi Singkat</td>
+          <td class="p-2">Penambahan Fitur Portal Berita. Menambahkan Fitur Portal Berita Di Website Sekolah Untuk Menyampaikan Informasi Terkini.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Sasaran</td>
+          <td class="p-2">Guru, Siswa, & Masyarakat Umum Yang Ingin Mengetahui Perkembangan Kegiatan Di Sekolah SMKN 1 Cilamaya.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Pelaksanaan</td>
+          <td class="p-2">Dari Awal Sampai Akhir Masa Penugasan. Fitur Dikembangkan Dalam 1 Bulan Dengan Konten Awal Berupa Judul Berita Dari Beberapa Kegiatan Sekolah & Karya Siswa.</td>
+        </tr>
+        <tr class="border-b border-white">
+          <td class="font-semibold align-top p-2">Tantangan</td>
+          <td class="p-2">Waktu Pengelolaan Website Terbatas Karena Fokus Utama Pada Kegiatan Lainnya, Kurangnya Konten Berita Terbaru Yang Dapat Diunggah Secara Berkala, & Minimnya Partisipasi Dari Siswa/Guru Dalam Menyumbang Berita/Artikel.</td>
+        </tr>
+        <tr>
+          <td class="font-semibold align-top p-2">Rekomendasi</td>
+          <td class="p-2">Menambahkan Fitur Menarik Seperti Portal Berita & Forum Diskusi Untuk Meningkatkan Interaksi, Membentuk Tim Kecil Yang Bertugas Mengelola & Memperbarui Konten Portal Berita, Serta Mengadakan Pelatihan Menulis Singkat Bagi Siswa/Guru Untuk Meningkatkan Kontribusi Artikel.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Tab Angka -->
+<div id="tab-numbers-container" class="mt-4 text-center bg-indigo-900 rounded-full py-2 px-2 w-fit mx-auto relative">
+  <!-- Literasi -->
+  <div class="tab-numbers hidden relative" data-parent="literasi">
+    <div class="number-indicator absolute top-0 left-0 h-8 bg-blue-600 rounded-full transition-all duration-300 z-0"></div>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">1</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">2</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">3</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">4</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">5</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">6</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">7</button>
+  </div>
+
+  <!-- Basic Knowledge -->
+  <div class="tab-numbers hidden relative" data-parent="basic">
+    <div class="number-indicator absolute top-0 left-0 h-8 bg-blue-600 rounded-full transition-all duration-300 z-0"></div>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">1</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">2</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">3</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">4</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">5</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">6</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">7</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">8</button>
+  </div>
+
+  <!-- Moon Festival -->
+  <div class="tab-numbers hidden relative" data-parent="moonfest">
+    <div class="number-indicator absolute top-0 left-0 h-8 bg-blue-600 rounded-full transition-all duration-300 z-0"></div>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">1</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">2</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">3</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">4</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">5</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">6</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">7</button>
+  </div>
+
+  <!-- Pojok Baca -->
+  <div class="tab-numbers hidden relative" data-parent="pojokbaca">
+    <div class="number-indicator absolute top-0 left-0 h-8 bg-blue-600 rounded-full transition-all duration-300 z-0"></div>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">1</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">2</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">3</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">4</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">5</button>
+  </div>
+
+  <!-- Web Sekolah -->
+  <div class="tab-numbers hidden relative" data-parent="web">
+    <div class="number-indicator absolute top-0 left-0 h-8 bg-blue-600 rounded-full transition-all duration-300 z-0"></div>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">1</button>
+    <button class="number-btn relative z-10 px-3 py-1 bg-indigo-200 rounded-full bg-opacity-5 text-white">2</button>
+  </div>
+</div>
+
+  </div>
+</section>
+
+  <div id="footer"></div>
+  <script src="/js/proker.js">
+  </script>
+</body>
+</html>

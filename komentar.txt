@@ -1,0 +1,22 @@
+<section id="next-section" class="bg-white text-gray-800 md:py-13 py-4 md:px-6 px-0">
+      <div class="max-w-full mx-auto text-center">
+        <h2 class="md:text-7xl text-4xl font-bold my-20 text-sky-600">
+          Apa itu Kampus Mengajar?
+        </h2>
+        <p class="text-xl my-20 text-justify mx-8">
+          Kampus Mengajar adalah program dari Kementerian Pendidikan Indonesia
+          yang mengajak mahasiswa untuk langsung terjun ke sekolah-sekolah,
+          khususnya di daerah 3T (terdepan, terluar, tertinggal). Dalam program
+          ini, mahasiswa bukan hanya menjadi pengajar bantu, tapi juga menjadi
+          inspirator, motivator, dan agen perubahan. Mereka membawa semangat
+          baru ke ruang-ruang kelas, membantu literasi dan numerasi, serta
+          mendorong kreativitas di lingkungan sekolah. Jika kamu seorang
+          mahasiswa yang ingin melihat langsung dampak nyata dari ilmu yang kamu
+          pelajari — inilah tempatnya. Kampus Mengajar bukan hanya program
+          pengabdian, tapi perjalanan hidup yang akan membentuk karakter dan
+          wawasanmu.
+        </p>
+      </div>
+    </section>
+
+    <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -1,0 +1,14 @@
+    .menu-enter {
+      transform: translateX(100%);
+    }
+    .menu-enter-active {
+      transition: transform 0.3s ease-out;
+      transform: translateX(0);
+    }
+    .menu-leave {
+      transform: translateX(0);
+    }
+    .menu-leave-active {
+      transition: transform 0.3s ease-in;
+      transform: translateX(100%);
+    }

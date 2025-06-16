@@ -1,0 +1,15 @@
+/* Background */
+.bg {
+  background-image: url("smkn1cilamaya/img7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Responsive background fix */
+@media (max-width: 768px) {
+  .bg {
+    background-attachment: scroll;
+  }
+}
