@@ -12,7 +12,7 @@
     <nav class="z-20 left-0 right-0 bg-gray-900 shadow-lg px-4 py-2 flex justify-between items-center flex-wrap sticky top-0">
   <!-- Kiri: Logo -->
   <a href="index.html" class="flex items-center space-x-2">
-    <img src="smkn1cilamaya/logo twh.webp" alt="logo" class="h-8 sm:h-10" />
+    <img src="smkn1cilamaya/logo twh.jpg" alt="logo" class="h-8 sm:h-10" />
     <div class="leading-tight">
       <h2 class="text-white font-semibold text-sm sm:text-base">Kampus Mengajar</h2>
       <p class="text-gray-400 text-xs sm:text-sm">Angkatan 8</p>
@@ -103,54 +103,76 @@
       </div>
     </section>
 
-    <section id="komentar" class="bg-gray-200 py-12 px-4">
-      <div class="max-w-3xl mx-auto text-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-2">Komentar & Dukungan</h2>
-        <p class="text-gray-600">Bagikan dukungan dan pemikiran Anda untuk program ini</p>
-      </div>
+  <section id="komentar" class="bg-gray-200 py-12 px-4">
+  <div class="max-w-3xl mx-auto text-center mb-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-2">Komentar & Dukungan</h2>
+    <p class="text-gray-600">Bagikan dukungan dan pemikiran Anda untuk program ini</p>
+  </div>
 
-      <!-- Belum Login -->
-      <div id="belum-login" class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 text-center">
-        <div class="text-gray-400 text-5xl mb-4">💬</div>
-        <h3 class="text-xl font-semibold mb-2">Login untuk Berkomentar</h3>
-        <p class="text-gray-600 mb-4">Silakan login terlebih dahulu untuk memberikan komentar</p>
-        <button
-          onclick="handleGoogleLogin()"
-          class="bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-green-600">
-          Login dengan Google
-        </button>
-      </div>
+  <!-- Belum Login -->
+  <div id="belum-login" class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 text-center">
+    <div class="text-gray-400 text-5xl mb-4">💬</div>
+    <h3 class="text-xl font-semibold mb-2">Login untuk Berkomentar</h3>
+    <p class="text-gray-600 mb-4">Silakan login terlebih dahulu untuk memberikan komentar</p>
+    <button
+      onclick="handleGoogleLogin()"
+      class="bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-green-600">
+      Login dengan Google
+    </button>
+  </div>
 
-      <!-- Setelah Login -->
-      <div id="sudah-login" class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 hidden">
-        <div class="flex items-center space-x-4 mb-4">
-          <img id="user-photo" src="" alt="Foto Profil" class="w-10 h-10 rounded-full bg-gray-200" />
-          <span id="user-name" class="font-semibold">User Demo</span>
-        </div>
+  <!-- Setelah Login -->
+  <div id="sudah-login" class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 hidden">
+    <div class="flex items-center space-x-4 mb-4">
+      <img id="user-photo" src="" alt="Foto Profil" class="w-10 h-10 rounded-full bg-gray-200" />
+      <span id="user-name" class="font-semibold">User Demo</span>
+      <button onclick="handleLogout()" class="ml-auto text-sm text-red-500 hover:underline">Logout</button>
+    </div>
 
-        <textarea
-          id="komentar-input"
-          class="w-full p-3 border border-gray-300 rounded-lg mb-4"
-          placeholder="Tuliskan komentar atau dukungan Anda..."
-          rows="4"></textarea>
+    <textarea
+      id="komentar-input"
+      class="w-full p-3 border border-gray-300 rounded-lg mb-4"
+      placeholder="Tuliskan komentar atau dukungan Anda..."
+      rows="4"></textarea>
 
-        <!-- Tambahkan wrapper flex di sini -->
-        <div class="flex justify-end">
-          <button
-            onclick="kirimKomentar()"
-            class="flex items-center justify-center bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg">
-            💬 Kirim Komentar
-          </button>
-        </div>
+    <div class="flex justify-end">
+      <button
+        onclick="kirimKomentar()"
+        class="flex items-center justify-center bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg">
+        💬 Kirim Komentar
+      </button>
+    </div>
+  </div>
 
-        <div id="daftar-komentar" class="mt-8 text-left">
-          <!-- Komentar akan ditambahkan di sini -->
-        </div>
-      </div>
+  <!-- KOMENTAR DITAMPILKAN UNTUK SIAPA SAJA -->
+  <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-8 mt-6">
+    <h3 class="text-xl font-semibold mb-4 text-gray-800">Komentar yang masuk:</h3>
+    <div id="daftar-komentar" class="space-y-4 text-left">
+      <!-- Komentar akan ditambahkan di sini lewat JS -->
+    </div>
+  </div>
+</section>
 
-    </section>
+
+<section class="bg-gradient-to-br from-white to-gray-100 pt-8 px-4">
+    <div class="w-full">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdDovbreGCT17QUVmWXdWgyqWz848_di0msd4WNKmKQTMMmPQ/viewform?embedded=true"
+        width="100%"
+        height="800"
+        class="w-full border-0 rounded-xl shadow-md"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+      >Memuat…</iframe>
+    </div>
+</section>
     <div id="footer"></div>
-    <div id="toast-container" class="fixed bottom-4 right-4 space-y-2 z-50"></div>
-    <script src="js/index.js"></script>
+    <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js"></script>
+<script type="module" src="/js/index.js"></script>
+<!-- Toast Notifikasi -->
+<div id="toast-container" class="fixed bottom-5 right-5 space-y-2 z-50"></div>
   </body>
 </html>
